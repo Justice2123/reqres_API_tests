@@ -1,6 +1,5 @@
 package tests;
 
-
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import models.CreateUserBodyModel;
@@ -21,12 +20,12 @@ import static org.hamcrest.Matchers.notNullValue;
 import static specs.ReqresSpecs.*;
 
 @Owner("AlyonaCh")
-@Tag("Api")
+@Tag("api")
 public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("проверка массива на null")
-    @Tag("regression")
+    @Tag("get")
     @Severity(NORMAL)
     void listDataNotEmptyTest() {
         step("запрос на получение данных", () ->
@@ -39,7 +38,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("проверка значения id в массиве")
-    @Tag("smoke")
+    @Tag("get")
     @Severity(NORMAL)
     void listDataIdTest() {
         step("запрос данных", () ->
@@ -52,7 +51,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("негативный тест для проверки 415 статуса")
-    @Tag("regression")
+    @Tag("post")
     @Severity(BLOCKER)
     void unSuccessfulCreate415Test() {
         step("не полный запрос", () ->
@@ -64,7 +63,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("создание пользователя")
-    @Tag("regression")
+    @Tag("post")
     @Severity(NORMAL)
     void successfulCreateUserTest() {
 
@@ -89,7 +88,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("негативный текст получение данных пользователя")
-    @Tag("smoke")
+    @Tag("get")
     @Severity(BLOCKER)
     void singleUserNotFoundTest() {
         step("запрос на не зарегистрированного пользователя", () ->
@@ -101,7 +100,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("запрос на удаление пользователя")
-    @Tag("smoke")
+    @Tag("delete")
     @Severity(BLOCKER)
     void deleteUserLoginTest() {
         step("запрос на удаление пользователя", () ->
@@ -113,7 +112,7 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("запрос на изменения поля job")
-    @Tag("regression")
+    @Tag("put")
     @Severity(NORMAL)
     void updateUserdataTest() {
 
