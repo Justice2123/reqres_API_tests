@@ -25,7 +25,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("проверка массива на null")
-    @Tag("get")
     @Severity(NORMAL)
     void listDataNotEmptyTest() {
         step("запрос на получение данных", () ->
@@ -38,7 +37,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("проверка значения id в массиве")
-    @Tag("get")
     @Severity(NORMAL)
     void listDataIdTest() {
         step("запрос данных", () ->
@@ -51,7 +49,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("негативный тест для проверки 415 статуса")
-    @Tag("post")
     @Severity(BLOCKER)
     void unSuccessfulCreate415Test() {
         step("не полный запрос", () ->
@@ -63,7 +60,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("создание пользователя")
-    @Tag("post")
     @Severity(NORMAL)
     void successfulCreateUserTest() {
 
@@ -88,7 +84,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("негативный текст получение данных пользователя")
-    @Tag("get")
     @Severity(BLOCKER)
     void singleUserNotFoundTest() {
         step("запрос на не зарегистрированного пользователя", () ->
@@ -100,7 +95,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("запрос на удаление пользователя")
-    @Tag("delete")
     @Severity(BLOCKER)
     void deleteUserLoginTest() {
         step("запрос на удаление пользователя", () ->
@@ -112,7 +106,6 @@ public class ReqresInTest extends TestBase {
 
     @Test
     @DisplayName("запрос на изменения поля job")
-    @Tag("put")
     @Severity(NORMAL)
     void updateUserdataTest() {
 

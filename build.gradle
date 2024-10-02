@@ -44,8 +44,12 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitJupiter",
             "org.slf4j:slf4j-simple:$slf4j",
             "org.assertj:assertj-core:$assertj",
-            "io.qameta.allure:allure-rest-assured:$qametaAllure"
+            "io.qameta.allure:allure-rest-assured:$qametaAllure",
     )
+}
+
+test {
+    useJUnitPlatform()
 }
 
 
@@ -61,11 +65,9 @@ tasks.withType(Test) {
     }
 }
 
-tasks.withType(Test) {
+task reqresTests(type: Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        if (System.getProperty("type") != null && !System.getProperty("type").isEmpty()) {
-            includeTags System.getProperty("type")
-        }
+        includeTags("api")
     }
 }
