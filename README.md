@@ -28,8 +28,8 @@
 <a href="https://web.telegram.org/"><img src="media/logo/Telegram.svg" width="50" height="50" alt="Telegram"/></a>
 <a href="https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="50" height="50" alt="Allure_TO"/></a>
 </p>
-Автотесты написаны на языке `Java` с использованием `JUnit 5`, `Selenide`, `Rest-Assured`. Сборщик проекта - `Gradle`. Для удаленного запуска реализована задача в `Jenkins` с формированием `Allure-отчета` и
-отправкой результатов в `Telegram канал` при помощи бота. Так же осуществлена интеграция с `Allure TestOps` и `Jira`.
+Автотесты написаны на языке <code>Java</code> с использованием <code>JUnit 5</code>, <code>Selenide</code>, <code>Rest-Assured</code>. Сборщик проекта - <code>Gradle</code>. Для удаленного запуска реализована задача в <code>Jenkins</code> с формированием <code>Allure-отчета</code> и
+отправкой результатов в <code>Telegram канал</code> при помощи бота. Так же осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>.
 
 ---
 
