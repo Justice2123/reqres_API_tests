@@ -33,12 +33,6 @@ public class ReqresSpecs {
             .log(BODY)
             .build();
 
-    public static ResponseSpecification responseStatus415 = new ResponseSpecBuilder()
-            .expectStatusCode(415)
-            .log(STATUS)
-            .log(BODY)
-            .build();
-
     public static ResponseSpecification responseStatus404 = new ResponseSpecBuilder()
             .expectStatusCode(404)
             .log(STATUS)

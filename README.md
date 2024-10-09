@@ -55,18 +55,18 @@
 
 ---
 <a id="allureReport"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/> [Allure](https://jenkins.autotests.cloud/job/reqres_api_tests/2/allure/) отчет
+## <img src="media/logo/Allure.svg" width="25" height="25"/> [Allure](https://jenkins.autotests.cloud/job/reqres_api_tests/allure/) отчет
 
 ### 🖨️ Главная страница отчета
 
 <p align="center">
-<img src="media/screens/allure_report.png" alt="Allure report">
+<a href="https://jenkins.autotests.cloud/job/reqres_api_tests/allure/"><img src="media/screens/allure_report.png" alt="Allure report"></a>
 </p>
 
 ### 📄 Тест-кейсы
 
 <p align="center">
-<img src="media/screens/allure_tests.png" alt="Test Case">
+<a href="https://jenkins.autotests.cloud/job/reqres_api_tests/3/allure/#suites/bf15168743ad9d63bb87253cdd924350"><img src="media/screens/allure_tests.png" alt="Test Case"></a>
 </p>
 
 ---
@@ -75,13 +75,13 @@
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 ## 🖨️ Основная страница отчёта
 
-<p align="center">  
-<img title="Allure TestOps Dashboard" src="media/screens/allure_testOps.png">  
+<a align="center">  
+<a href="https://allure.autotests.cloud/project/4467/dashboards"><img title="Allure TestOps Dashboard" src="media/screens/allure_testOps.png"></a>  
 </p>  
 
 ## :pinching_hand:: Пример тест-кейса
 <p align="center">
-<img title="AllureTC" src="media/screens/allure.png">
+<a href="https://allure.autotests.cloud/project/4467/test-cases?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoibG9uZ0FycmF5IiwidmFsdWUiOlsiLTMiXX1d&treeId=0"><img title="AllureTC" src="media/screens/allure.png"></a>
 </p>
 
 ---
@@ -93,7 +93,7 @@
 ### Задача в Jira
 
 <p align="center">
-<img src="media/screens/jira.png" alt="TestOps launch">
+<a href="https://jira.autotests.cloud/browse/HOMEWORK-1358"><img src="media/screens/jira.png" alt="TestOps launch"></a>
 </p>
 
 #### Содержание задачи

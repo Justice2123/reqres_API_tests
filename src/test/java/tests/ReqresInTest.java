@@ -15,8 +15,7 @@ import static io.qameta.allure.SeverityLevel.BLOCKER;
 import static io.qameta.allure.SeverityLevel.NORMAL;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.*;
 import static specs.ReqresSpecs.*;
 
 @Owner("AlyonaCh")
@@ -44,7 +43,7 @@ public class ReqresInTest extends TestBase {
                         .get("/unknown")
                         .then()
                         .spec(responseStatus200))
-                .body("data[0].id", is(1));
+                .body("data[1].id", is(1));
     }
 
     @Test
@@ -55,14 +54,13 @@ public class ReqresInTest extends TestBase {
                 given(requestRegres415)
                         .post("/users")
                         .then()
-                        .spec(responseStatus415));
+                        .statusCode(415));
     }
 
     @Test
     @DisplayName("создание пользователя")
     @Severity(NORMAL)
     void successfulCreateUserTest() {
-
         CreateUserBodyModel authData = new CreateUserBodyModel();
         authData.setName("morpheus");
         authData.setJob("leader");
