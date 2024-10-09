@@ -7,5 +7,4 @@ public class CreateUserResponseModel {
 
     String name, job, id, createdAt;
 
-
 }

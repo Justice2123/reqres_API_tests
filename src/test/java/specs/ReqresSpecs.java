@@ -17,10 +17,6 @@ public class ReqresSpecs {
             .log().all()
             .contentType(JSON);
 
-    public static RequestSpecification requestRegres415 = with()
-            .filter(withCustomTemplates())
-            .log().uri();
-
     public static ResponseSpecification responseCreateUserSpec = new ResponseSpecBuilder()
             .expectStatusCode(201)
             .log(STATUS)

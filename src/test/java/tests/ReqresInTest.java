@@ -2,10 +2,7 @@ package tests;
 
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
-import models.CreateUserBodyModel;
-import models.CreateUserResponseModel;
-import models.UpdateUserBodyModel;
-import models.UpdateUserResponseModel;
+import models.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -35,15 +32,24 @@ public class ReqresInTest extends TestBase {
     }
 
     @Test
-    @DisplayName("проверка значения id в массиве")
+    @DisplayName("запрос списка данных")
     @Severity(NORMAL)
-    void listDataIdTest() {
-        step("запрос данных", () ->
-                given(requestRegres)
-                        .get("/unknown")
-                        .then()
-                        .spec(responseStatus200))
-                .body("data[1].id", is(1));
+    void getDataList() {
+
+        GetUserDataResponseModel response =
+                step("отправка запроса списка данных", () ->
+                        given(requestRegres)
+                                .when()
+                                .get("/unknown")
+                                .then()
+                                .spec(responseStatus200)
+                                .extract().as(GetUserDataResponseModel.class));
+        step("проверка номера цвета", () ->
+                assertThat(response.getData().get(0).getColor().equals("98B2D1")));
+        step("проверка айди", () ->
+                assertThat(response.getData().get(0).getId().equals(1)));
+        step("проверка года", () ->
+                assertThat(response.getData().get(0).getYear().equals(2000)));
     }
 
     @Test
@@ -51,7 +57,8 @@ public class ReqresInTest extends TestBase {
     @Severity(BLOCKER)
     void unSuccessfulCreate415Test() {
         step("не полный запрос", () ->
-                given(requestRegres415)
+                given()
+                        .log().uri()
                         .post("/users")
                         .then()
                         .statusCode(415));
